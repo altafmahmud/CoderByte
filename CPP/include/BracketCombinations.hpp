@@ -19,9 +19,10 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 // function which generates all possible n pairs of balanced
-void genParenthesisUtil(int n, int open, int close, unsigned &count)
+void genParenthesisUtil(int n, int open, int close, std::string s, std::vector<std::string>& ans)
 {
 
     // if the count of both open and close parentheses
@@ -29,7 +30,7 @@ void genParenthesisUtil(int n, int open, int close, unsigned &count)
     // parentheses.
     if (open == n && close == n)
     {
-        ++count;
+        ans.push_back(s);
         return;
     }
 
@@ -38,7 +39,7 @@ void genParenthesisUtil(int n, int open, int close, unsigned &count)
     // that time is less than n.
     if (open < n)
     {
-        genParenthesisUtil(n, open + 1, close, count);
+        genParenthesisUtil(n, open + 1, close, s + "(", ans);
     }
 
     // At any index i in the generation of the string s, we
@@ -46,17 +47,16 @@ void genParenthesisUtil(int n, int open, int close, unsigned &count)
     // that time is less than the count of open parentheses.
     if (close < open)
     {
-        genParenthesisUtil(n, open, close + 1, count);
+        genParenthesisUtil(n, open, close + 1, s + ")", ans);
     }
 }
 
-unsigned BracketCombinations(unsigned num)
+std::vector<std::string> BracketCombinations(unsigned num)
 {
-    if (num == 0)
+    std::vector<std::string> ans;
+    if (num > 0)
     {
-        return 1;
+        genParenthesisUtil(num, 0, 0, "", ans);
     }
-    unsigned count = 0;
-    genParenthesisUtil(num, 0, 0, count);
-    return count;
+    return ans;
 }
