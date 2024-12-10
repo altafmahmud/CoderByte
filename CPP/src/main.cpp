@@ -2,8 +2,9 @@
 #include "MinWindowSubstr.hpp"
 #include "BracketCombinations.hpp"
 #include "TreeConstructor.hpp"
-
-#include <algorithm>
+#include "CodelandUsernameValidation.hpp"
+#include "BracketMatcher.hpp"
+#include "FindIntersection.hpp"
 
 int main()
 {
@@ -29,7 +30,7 @@ int main()
 
     {
         // TreeConstructor
-        
+
         std::cout << "\n";
         // std::string A[] = coderbyteInternalStdinFunction(stdin);
         // std::string A[] = {"(1,2)", "(2,4)", "(5,7)", "(7,2)", "(9,5)"};
@@ -37,6 +38,37 @@ int main()
         std::string A[] = {"(2,3)", "(1,2)", "(4,9)", "(9,3)", "(12,9)", "(6,4)"};
         int arrLength = sizeof(A) / sizeof(*A);
         std::cout << TreeConstructor(A, arrLength);
+    }
+
+    {
+        // Codeland Username Validation
+
+        std::cout << "\n\n";
+        // keep this function call here
+        // cout << CodelandUsernameValidation(coderbyteInternalStdinFunction(stdin));
+        std::cout << CodelandUsernameValidation("u__hello_world123");
+        // std::cout << CodelandUsernameValidation("aa_");
+    }
+
+    {
+        // Bracket Matcher
+
+        std::cout << "\n\n";
+        // std::cout << BracketMatcher("(coder)(byte))");
+        // std::cout << BracketMatcher("(c(oder)) b(yte)");
+        std::cout << BracketMatcher("");
+    }
+
+    {
+        // Find Intersection
+
+        std::cout << "\n\n";
+
+        // std::string A[] = {"1, 3, 4, 7, 13", "1, 2, 4, 13, 15"};
+        std::string A[] = {"1, 3, 9, 10, 17, 18", "1, 4, 9, 10"};
+        // std::string A[] = {"1, 2, 3, 4, 5, 6", "7, 8, 9, 10"};
+        int arrLength = sizeof(A) / sizeof(*A);
+        std::cout << FindIntersection(A, arrLength);
     }
 
     return 0;
