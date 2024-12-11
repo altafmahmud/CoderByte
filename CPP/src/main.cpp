@@ -7,6 +7,8 @@
 #include "FindIntersection.hpp"
 #include "QuestionsMarks.hpp"
 #include "FirstReverse.hpp"
+#include "FirstFactorial.hpp"
+#include "LongestWord.hpp"
 
 int main()
 {
@@ -96,6 +98,21 @@ int main()
         std::cout << FirstReverse("coderbyte");
         std::cout << "\n";
         std::cout << FirstReverse("I Love Code");
+    }
+
+    {
+        // First Factorial
+        std::cout << "\n\n";
+        std::cout << FirstFactorial(18);
+    }
+
+    {
+        // Longest Word
+
+        std::cout << "\n\n";
+        std::cout << LongestWord("fun&!! time");
+        std::cout << "\n";
+        std::cout << LongestWord("I love dogs");
     }
 
     return 0;
