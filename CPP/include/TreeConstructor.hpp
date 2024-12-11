@@ -36,7 +36,7 @@ std::string discardParenthesis(std::string &str)
 {
     const auto pos1 = str.find('(');
     const auto pos2 = str.rfind(')');
-    auto substr = str.substr(pos1+1, pos2-1);
+    auto substr = str.substr(pos1 + 1, pos2 - 1);
     return substr;
 }
 

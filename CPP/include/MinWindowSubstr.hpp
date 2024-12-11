@@ -39,8 +39,8 @@ unsigned diffWithAllKChars(const std::string &subStr, const unsigned startAt)
     unsigned diff = 0;
     for (const auto &element : K_counter)
     {
-        const auto& key = element.first;
-        const auto& val = element.second;
+        const auto &key = element.first;
+        const auto &val = element.second;
         auto subStrItr = N_counter.find(key);
         if (subStrItr == N_counter.end())
         {

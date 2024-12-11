@@ -20,7 +20,7 @@
 #include <vector>
 #include <algorithm>
 
-std::vector<int> tokenizeToNum(const std::string& str)
+std::vector<int> tokenizeToNum(const std::string &str)
 {
     std::vector<int> tokens;
     std::istringstream iss(str);
@@ -37,8 +37,8 @@ std::vector<int> tokenizeToNum(const std::string& str)
 std::string FindIntersection(const std::string strArr[], int arrLength)
 {
     // code goes here
-    const auto& nums01 = tokenizeToNum(strArr[0]);
-    const auto& nums02 = tokenizeToNum(strArr[1]);
+    const auto &nums01 = tokenizeToNum(strArr[0]);
+    const auto &nums02 = tokenizeToNum(strArr[1]);
     std::vector<int> res;
     std::set_intersection(nums01.begin(), nums01.end(), nums02.begin(), nums02.end(), std::back_inserter(res));
     if (res.empty())
@@ -49,7 +49,7 @@ std::string FindIntersection(const std::string strArr[], int arrLength)
     for (auto idx = 0; idx < res.size(); ++idx)
     {
         oss << res[idx];
-        if (idx < res.size()-1)
+        if (idx < res.size() - 1)
         {
             oss << ',';
         }

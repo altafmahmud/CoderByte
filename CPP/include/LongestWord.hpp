@@ -1,7 +1,7 @@
 // Longest Word
 // Easy
-// Have the function LongestWord(sen) take the sen parameter being passed and return the longest word in the string. 
-// If there are two or more words that are the same length, return the first word from the string with that length. Ignore punctuation and assume sen will not be empty. 
+// Have the function LongestWord(sen) take the sen parameter being passed and return the longest word in the string.
+// If there are two or more words that are the same length, return the first word from the string with that length. Ignore punctuation and assume sen will not be empty.
 // Words may also contain numbers, for example "Hello world123 567"
 
 // Examples
@@ -19,9 +19,10 @@
 #include <sstream>
 #include <algorithm>
 
-bool isWord(const std::string& str)
+bool isWord(const std::string &str)
 {
-    const auto itr = std::find_if(str.begin(), str.end(), [] (const char ch) { return !std::isalnum(ch); });
+    const auto itr = std::find_if(str.begin(), str.end(), [](const char ch)
+                                  { return !std::isalnum(ch); });
     return itr == str.end();
 }
 

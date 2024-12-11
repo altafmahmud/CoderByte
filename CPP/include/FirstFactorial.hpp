@@ -22,5 +22,5 @@ unsigned long FirstFactorial(unsigned long num)
     {
         return 1;
     }
-    return num*FirstFactorial(num-1);
+    return num * FirstFactorial(num - 1);
 }

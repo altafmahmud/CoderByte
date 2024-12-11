@@ -16,12 +16,12 @@
 #include <string>
 #include <stack>
 
-std::string BracketMatcher(const std::string& str)
+std::string BracketMatcher(const std::string &str)
 {
     // code goes here
     std::string ret("1");
     std::stack<char> stck;
-    for (const auto& ch : str)
+    for (const auto &ch : str)
     {
         if (ch == '(')
         {
@@ -34,7 +34,7 @@ std::string BracketMatcher(const std::string& str)
                 ret = "0";
                 break;
             }
-            const auto& top = stck.top();
+            const auto &top = stck.top();
             if (top != '(')
             {
                 ret = "0";

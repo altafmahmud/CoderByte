@@ -22,7 +22,7 @@
 #include <vector>
 
 // function which generates all possible n pairs of balanced
-void genParenthesisUtil(int n, int open, int close, std::string s, std::vector<std::string>& ans)
+void genParenthesisUtil(int n, int open, int close, std::string s, std::vector<std::string> &ans)
 {
 
     // if the count of both open and close parentheses
