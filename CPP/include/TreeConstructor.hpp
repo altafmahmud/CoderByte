@@ -18,6 +18,8 @@
 // Input: {"(1,2)", "(3,2)", "(2,12)", "(5,2)"}
 // Output: false
 
+#pragma once
+
 #include <iostream>
 #include <string>
 #include <sstream>

@@ -12,6 +12,8 @@
 // Input: {"1, 3, 9, 10, 17, 18", "1, 4, 9, 10"}
 // Output: 1,9,10
 
+#pragma once
+
 #include <iostream>
 #include <string>
 #include <sstream>

@@ -5,6 +5,7 @@
 #include "CodelandUsernameValidation.hpp"
 #include "BracketMatcher.hpp"
 #include "FindIntersection.hpp"
+#include "QuestionsMarks.hpp"
 
 int main()
 {
@@ -63,12 +64,29 @@ int main()
         // Find Intersection
 
         std::cout << "\n\n";
-
         // std::string A[] = {"1, 3, 4, 7, 13", "1, 2, 4, 13, 15"};
         std::string A[] = {"1, 3, 9, 10, 17, 18", "1, 4, 9, 10"};
         // std::string A[] = {"1, 2, 3, 4, 5, 6", "7, 8, 9, 10"};
         int arrLength = sizeof(A) / sizeof(*A);
         std::cout << FindIntersection(A, arrLength);
+    }
+
+    {
+        // Questions Marks
+
+        std::cout << "\n\n";
+        std::cout << QuestionsMarks("arrb6???4xxbl5???eee5");
+        std::cout << "\n";        
+        std::cout << QuestionsMarks("acc?7??sss?3rr1??????5");
+        std::cout << "\n";
+        std::cout << QuestionsMarks("5??aaaaaaaaaaaaaaaaaaa?5?5");
+        std::cout << "\n";
+        std::cout << QuestionsMarks("9???1???9??1???9");
+        std::cout << "\n";
+        std::cout << QuestionsMarks("aa6?9");
+        std::cout << "\n";
+        std::cout << QuestionsMarks("aa6???4");
+        std::cout << "\n";        
     }
 
     return 0;
