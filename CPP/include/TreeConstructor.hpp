@@ -1,3 +1,5 @@
+// Tree Constructor
+// Medium
 // Have the function TreeConstructor(strArr) take the array of strings stored in strArr, which will contain pairs of integers in the following format: (i1,i2),
 // where i1 represents a child node in a tree and the second integer i2 signifies that it is the parent of i1. For example: if strArr is ["(1,2)", "(2,4)", "(7,2)"],
 // then this forms the following tree:
