@@ -6,6 +6,7 @@
 #include "BracketMatcher.hpp"
 #include "FindIntersection.hpp"
 #include "QuestionsMarks.hpp"
+#include "FirstReverse.hpp"
 
 int main()
 {
@@ -76,7 +77,7 @@ int main()
 
         std::cout << "\n\n";
         std::cout << QuestionsMarks("arrb6???4xxbl5???eee5");
-        std::cout << "\n";        
+        std::cout << "\n";
         std::cout << QuestionsMarks("acc?7??sss?3rr1??????5");
         std::cout << "\n";
         std::cout << QuestionsMarks("5??aaaaaaaaaaaaaaaaaaa?5?5");
@@ -86,7 +87,15 @@ int main()
         std::cout << QuestionsMarks("aa6?9");
         std::cout << "\n";
         std::cout << QuestionsMarks("aa6???4");
-        std::cout << "\n";        
+    }
+
+    {
+        // First Reverse
+
+        std::cout << "\n\n";
+        std::cout << FirstReverse("coderbyte");
+        std::cout << "\n";
+        std::cout << FirstReverse("I Love Code");
     }
 
     return 0;
